@@ -9,8 +9,8 @@
     <style>
         :root {
             --theme-color: #00ff66;
-            --theme-glow: rgba(0, 255, 102, 0.4);
-            --bg-dark: #020502;
+            --theme-glow: rgba(0, 255, 102, 0.5);
+            --bg-dark: #010401;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; transition: all 0.3s ease; }
@@ -18,26 +18,29 @@
         body {
             font-family: 'Rajdhani', sans-serif; color: #fff;
             min-height: 100vh; display: flex; justify-content: center; align-items: flex-start;
-            overflow-x: hidden; background-color: var(--bg-dark); padding: 8px 4px;
+            overflow-x: hidden; background-color: var(--bg-dark); padding: 10px 5px;
         }
 
-        /* Premium Hacker Matrix Background Animation */
-        .matrix-bg {
+        /* Ultimate Hacker Cyber Grid Background */
+        .cyber-grid-bg {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(rgba(2, 5, 2, 0.85), rgba(2, 5, 2, 0.92)), 
-                        url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1080&auto=format&fit=crop');
-            background-size: cover; background-position: center; z-index: -1;
+            background-color: #010401;
+            background-image: 
+                linear-gradient(rgba(0, 255, 102, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 102, 0.05) 1px, transparent 1px);
+            background-size: 25px 25px;
+            z-index: -1;
             pointer-events: none;
         }
 
-        .matrix-bg::after {
+        .cyber-grid-bg::after {
             content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            background: repeating-linear-gradient(0deg, rgba(0,0,0,0.15), rgba(0,0,0,0.15) 1px, transparent 1px, transparent 2px);
-            pointer-events: none; opacity: 0.6;
+            background: radial-gradient(circle at center, transparent 30%, rgba(1, 4, 1, 0.95) 90%);
+            pointer-events: none;
         }
 
         .dashboard {
-            width: 100%; max-width: 450px; background: rgba(5, 12, 5, 0.88);
+            width: 100%; max-width: 450px; background: rgba(3, 10, 4, 0.92);
             backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
             border: 1px solid var(--theme-color); border-radius: 12px;
             box-shadow: 0 0 25px var(--theme-glow), inset 0 0 15px rgba(0, 255, 102, 0.1); 
@@ -45,26 +48,26 @@
         }
 
         .header {
-            text-align: center; padding: 12px; border-bottom: 1px solid rgba(0, 255, 102, 0.2);
-            background: rgba(0, 20, 5, 0.7);
+            text-align: center; padding: 12px; border-bottom: 1px solid rgba(0, 255, 102, 0.25);
+            background: rgba(0, 20, 5, 0.8);
         }
 
         .header h1 {
-            font-family: 'Orbitron', sans-serif; font-size: 1.2rem;
+            font-family: 'Orbitron', sans-serif; font-size: 1.25rem;
             color: var(--theme-color); text-shadow: 0 0 8px var(--theme-glow); letter-spacing: 1.5px;
         }
-        .header p { color: #8fa; font-size: 0.68rem; margin-top: 2px; }
+        .header p { color: #8fa; font-size: 0.7rem; margin-top: 2px; }
 
-        .tabs { display: flex; background: rgba(0, 10, 3, 0.9); border-bottom: 1px solid rgba(0, 255, 102, 0.15); }
+        .tabs { display: flex; background: rgba(0, 12, 3, 0.95); border-bottom: 1px solid rgba(0, 255, 102, 0.2); }
         .tab-btn {
             flex: 1; padding: 8px 1px; background: transparent; border: none; color: #6a8;
-            font-family: 'Orbitron', sans-serif; font-size: 0.52rem; cursor: pointer;
+            font-family: 'Orbitron', sans-serif; font-size: 0.55rem; cursor: pointer;
             border-bottom: 2px solid transparent; text-transform: uppercase; text-align: center;
         }
-        .tab-btn:hover { color: #fff; background: rgba(0, 255, 102, 0.05); }
+        .tab-btn:hover { color: #fff; background: rgba(0, 255, 102, 0.08); }
         .tab-btn.active {
             color: var(--theme-color); border-bottom-color: var(--theme-color);
-            text-shadow: 0 0 6px var(--theme-glow); background: rgba(0, 255, 102, 0.1);
+            text-shadow: 0 0 6px var(--theme-glow); background: rgba(0, 255, 102, 0.12);
             font-weight: bold;
         }
 
@@ -75,23 +78,23 @@
 
         .input-group { display: flex; gap: 6px; margin-bottom: 10px; }
         input[type="text"], select {
-            flex: 1; background: rgba(0, 5, 2, 0.8); border: 1px solid rgba(0, 255, 102, 0.3);
+            flex: 1; background: rgba(0, 6, 2, 0.9); border: 1px solid rgba(0, 255, 102, 0.35);
             padding: 8px 10px; border-radius: 5px; color: #fff; font-size: 0.82rem;
             font-family: 'Rajdhani', sans-serif; outline: none; letter-spacing: 0.5px;
         }
         input[type="text"]:focus, select:focus { border-color: var(--theme-color); box-shadow: 0 0 10px var(--theme-glow); }
-        select option { background: #031003; color: #fff; }
+        select option { background: #020d02; color: #fff; }
 
         button.run-btn {
-            background: rgba(0, 20, 5, 0.8); border: 1px solid var(--theme-color);
+            background: rgba(0, 20, 5, 0.9); border: 1px solid var(--theme-color);
             color: var(--theme-color); padding: 0 10px; font-family: 'Orbitron', sans-serif;
             font-size: 0.62rem; font-weight: bold; border-radius: 5px; cursor: pointer;
             text-transform: uppercase; box-shadow: 0 0 8px var(--theme-glow) inset; white-space: nowrap;
         }
-        button.run-btn:hover { background: var(--theme-color); color: #020502; box-shadow: 0 0 15px var(--theme-glow); }
+        button.run-btn:hover { background: var(--theme-color); color: #010401; box-shadow: 0 0 15px var(--theme-glow); }
 
         .output-box {
-            background: rgba(2, 8, 3, 0.85); border: 1px dashed rgba(0, 255, 102, 0.4);
+            background: rgba(1, 6, 2, 0.9); border: 1px dashed rgba(0, 255, 102, 0.4);
             border-radius: 5px; padding: 10px; min-height: 110px;
             display: flex; flex-direction: column; justify-content: center;
         }
@@ -115,16 +118,16 @@
 
         .action-buttons { display: none; gap: 5px; margin-top: 10px; flex-wrap: wrap; }
         .action-btn {
-            flex: 1; min-width: 65px; padding: 6px 3px; background: rgba(0, 15, 5, 0.7);
+            flex: 1; min-width: 65px; padding: 6px 3px; background: rgba(0, 15, 5, 0.8);
             border: 1px solid var(--theme-color); color: var(--theme-color);
             font-family: 'Orbitron', sans-serif; font-size: 0.6rem; font-weight: bold;
             border-radius: 4px; cursor: pointer; text-align: center; text-transform: uppercase;
             box-shadow: inset 0 0 4px var(--theme-glow);
         }
-        .action-btn:hover { background: var(--theme-color); color: #020502; box-shadow: 0 0 12px var(--theme-glow); }
+        .action-btn:hover { background: var(--theme-color); color: #010401; box-shadow: 0 0 12px var(--theme-glow); }
 
         .raw-code-box {
-            background: rgba(0, 3, 1, 0.9); padding: 6px; border-radius: 4px; border: 1px dashed rgba(0, 255, 102, 0.3);
+            background: rgba(0, 3, 1, 0.95); padding: 6px; border-radius: 4px; border: 1px dashed rgba(0, 255, 102, 0.3);
             font-family: monospace; font-size: 0.65rem; color: #00ffcc; text-align: left; margin-top: 4px;
             word-break: break-all;
         }
@@ -139,7 +142,7 @@
 </head>
 <body class="theme-ff">
 
-<div class="matrix-bg"></div>
+<div class="cyber-grid-bg"></div>
 
 <div class="dashboard">
     <div class="header">
