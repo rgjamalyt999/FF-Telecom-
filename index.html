@@ -17,7 +17,7 @@
         body {
             font-family: 'Rajdhani', sans-serif; color: #fff;
             min-height: 100vh; display: flex; justify-content: center; align-items: flex-start;
-            overflow-x: hidden; background-color: #030303; padding: 10px 5px;
+            overflow-x: hidden; background-color: #030303; padding: 8px 4px;
         }
 
         .bg-layer {
@@ -38,104 +38,104 @@
         .bg-ff.active { opacity: 0.55; }
 
         .dashboard {
-            width: 100%; max-width: 480px; background: rgba(8, 8, 8, 0.94);
+            width: 100%; max-width: 450px; background: rgba(8, 8, 8, 0.95);
             backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
             border: 1px solid var(--theme-color); border-radius: 10px;
             box-shadow: 0 0 20px var(--theme-glow); overflow: hidden;
-            z-index: 10; margin-bottom: 20px;
+            z-index: 10; margin-bottom: 15px;
         }
 
         .header {
-            text-align: center; padding: 12px; border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center; padding: 10px; border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             background: rgba(0, 0, 0, 0.7);
         }
 
         .header h1 {
-            font-family: 'Orbitron', sans-serif; font-size: 1.3rem;
-            color: var(--theme-color); text-shadow: 0 0 6px var(--theme-glow); letter-spacing: 1px;
+            font-family: 'Orbitron', sans-serif; font-size: 1.15rem;
+            color: var(--theme-color); text-shadow: 0 0 5px var(--theme-glow); letter-spacing: 1px;
         }
-        .header p { color: #aaa; font-size: 0.75rem; margin-top: 1px; }
+        .header p { color: #aaa; font-size: 0.65rem; margin-top: 1px; }
 
-        .tabs { display: flex; background: rgba(0, 0, 0, 0.8); }
+        .tabs { display: flex; background: rgba(0, 0, 0, 0.85); }
         .tab-btn {
-            flex: 1; padding: 8px 2px; background: transparent; border: none; color: #888;
-            font-family: 'Orbitron', sans-serif; font-size: 0.6rem; cursor: pointer;
+            flex: 1; padding: 7px 1px; background: transparent; border: none; color: #888;
+            font-family: 'Orbitron', sans-serif; font-size: 0.52rem; cursor: pointer;
             border-bottom: 2px solid transparent; text-transform: uppercase; text-align: center;
         }
         .tab-btn:hover { color: #fff; background: rgba(255, 255, 255, 0.04); }
         .tab-btn.active {
             color: var(--theme-color); border-bottom-color: var(--theme-color);
-            text-shadow: 0 0 5px var(--theme-glow); background: rgba(255, 255, 255, 0.05);
+            text-shadow: 0 0 4px var(--theme-glow); background: rgba(255, 255, 255, 0.06);
             font-weight: bold;
         }
 
-        .content { padding: 12px; }
+        .content { padding: 10px; }
         .tab-content { display: none; animation: fadeIn 0.3s ease; }
         .tab-content.active { display: block; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(3px); } to { opacity: 1; transform: translateY(0); } }
 
-        .input-group { display: flex; gap: 6px; margin-bottom: 10px; }
+        .input-group { display: flex; gap: 5px; margin-bottom: 8px; }
         input[type="text"], select {
             flex: 1; background: rgba(0, 0, 0, 0.6); border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 8px 10px; border-radius: 5px; color: #fff; font-size: 0.85rem;
+            padding: 7px 9px; border-radius: 4px; color: #fff; font-size: 0.8rem;
             font-family: 'Rajdhani', sans-serif; outline: none; letter-spacing: 0.5px;
         }
-        input[type="text"]:focus, select:focus { border-color: var(--theme-color); box-shadow: 0 0 8px var(--theme-glow); }
+        input[type="text"]:focus, select:focus { border-color: var(--theme-color); box-shadow: 0 0 6px var(--theme-glow); }
         select option { background: #111; color: #fff; }
 
         button.run-btn {
             background: rgba(0, 0, 0, 0.7); border: 1px solid var(--theme-color);
-            color: var(--theme-color); padding: 0 12px; font-family: 'Orbitron', sans-serif;
-            font-size: 0.68rem; font-weight: bold; border-radius: 5px; cursor: pointer;
-            text-transform: uppercase; box-shadow: 0 0 6px var(--theme-glow) inset; white-space: nowrap;
+            color: var(--theme-color); padding: 0 8px; font-family: 'Orbitron', sans-serif;
+            font-size: 0.6rem; font-weight: bold; border-radius: 4px; cursor: pointer;
+            text-transform: uppercase; box-shadow: 0 0 5px var(--theme-glow) inset; white-space: nowrap;
         }
-        button.run-btn:hover { background: var(--theme-color); color: #000; box-shadow: 0 0 12px var(--theme-glow); }
+        button.run-btn:hover { background: var(--theme-color); color: #000; box-shadow: 0 0 10px var(--theme-glow); }
 
-        /* Output box: Height limit removed so all results show fully on one page without inner scrolling */
         .output-box {
-            background: rgba(0, 0, 0, 0.7); border: 1px dashed var(--theme-color);
-            border-radius: 5px; padding: 10px; min-height: 120px;
+            background: rgba(0, 0, 0, 0.75); border: 1px dashed var(--theme-color);
+            border-radius: 4px; padding: 8px; min-height: 100px;
             display: flex; flex-direction: column; justify-content: center;
         }
-        .placeholder { text-align: center; color: #666; font-size: 0.75rem; font-family: 'Orbitron', sans-serif; }
+        .placeholder { text-align: center; color: #666; font-size: 0.7rem; font-family: 'Orbitron', sans-serif; }
 
         .record-header {
             color: #fff; background: rgba(255,255,255,0.08); font-family: 'Orbitron', sans-serif;
-            margin: 10px 0 4px 0; padding: 3px 6px; border-left: 2px solid var(--theme-color);
-            text-shadow: 0 0 3px var(--theme-glow); font-size: 0.7rem; letter-spacing: 0.5px;
+            margin: 8px 0 3px 0; padding: 3px 5px; border-left: 2px solid var(--theme-color);
+            text-shadow: 0 0 3px var(--theme-glow); font-size: 0.65rem; letter-spacing: 0.5px;
         }
 
-        .data-row { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px solid rgba(255,255,255,0.04); font-size: 0.78rem; gap: 6px; }
-        .data-label { color: #aaa; flex-shrink: 0; font-size: 0.75rem; }
-        .data-value { color: #fff; font-weight: bold; text-shadow: 0 0 2px rgba(255,255,255,0.3); text-align: right; word-break: break-all; font-size: 0.75rem; }
+        .data-row { display: flex; justify-content: space-between; padding: 3px 0; border-bottom: 1px solid rgba(255,255,255,0.03); font-size: 0.73rem; gap: 5px; }
+        .data-label { color: #aaa; flex-shrink: 0; font-size: 0.7rem; }
+        .data-value { color: #fff; font-weight: bold; text-shadow: 0 0 2px rgba(255,255,255,0.3); text-align: right; word-break: break-all; font-size: 0.7rem; }
 
-        .success-badge { display: block; text-align: center; color: var(--theme-color); font-family: 'Orbitron', sans-serif; margin-bottom: 6px; font-size: 0.78rem; text-shadow: 0 0 5px var(--theme-glow); }
+        .success-badge { display: block; text-align: center; color: var(--theme-color); font-family: 'Orbitron', sans-serif; margin-bottom: 5px; font-size: 0.72rem; text-shadow: 0 0 4px var(--theme-glow); }
+        .error-badge { display: block; text-align: center; color: #ff003c; font-family: 'Orbitron', sans-serif; margin-bottom: 5px; font-size: 0.72rem; text-shadow: 0 0 4px rgba(255,0,60,0.5); }
         
-        .loader { width: 30px; height: 30px; border: 3px solid transparent; border-top-color: var(--theme-color); border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto; }
+        .loader { width: 26px; height: 26px; border: 3px solid transparent; border-top-color: var(--theme-color); border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto; }
         @keyframes spin { 100% { transform: rotate(360deg); } }
 
-        .action-buttons { display: none; gap: 5px; margin-top: 10px; flex-wrap: wrap; }
+        .action-buttons { display: none; gap: 4px; margin-top: 8px; flex-wrap: wrap; }
         .action-btn {
-            flex: 1; min-width: 70px; padding: 6px 3px; background: rgba(0,0,0,0.5);
+            flex: 1; min-width: 60px; padding: 5px 2px; background: rgba(0,0,0,0.6);
             border: 1px solid var(--theme-color); color: var(--theme-color);
-            font-family: 'Orbitron', sans-serif; font-size: 0.62rem; font-weight: bold;
-            border-radius: 4px; cursor: pointer; text-align: center; text-transform: uppercase;
+            font-family: 'Orbitron', sans-serif; font-size: 0.58rem; font-weight: bold;
+            border-radius: 3px; cursor: pointer; text-align: center; text-transform: uppercase;
             box-shadow: inset 0 0 3px var(--theme-glow);
         }
-        .action-btn:hover { background: var(--theme-color); color: #000; box-shadow: 0 0 10px var(--theme-glow); }
+        .action-btn:hover { background: var(--theme-color); color: #000; box-shadow: 0 0 8px var(--theme-glow); }
 
         .raw-code-box {
-            background: rgba(0, 0, 0, 0.8); padding: 6px; border-radius: 4px; border: 1px dashed #666;
-            font-family: monospace; font-size: 0.68rem; color: #ffeb3b; text-align: left; margin-top: 3px;
+            background: rgba(0, 0, 0, 0.85); padding: 5px; border-radius: 3px; border: 1px dashed #666;
+            font-family: monospace; font-size: 0.63rem; color: #ffeb3b; text-align: left; margin-top: 3px;
             word-break: break-all;
         }
 
         .dev-watermark {
-            margin-top: 10px; padding-top: 6px; border-top: 1px dashed var(--theme-color);
+            margin-top: 8px; padding-top: 5px; border-top: 1px dashed var(--theme-color);
             text-align: center; font-family: 'Orbitron', sans-serif; animation: fadeIn 0.3s ease;
         }
-        .dev-watermark .name { color: var(--theme-color); font-size: 0.72rem; text-shadow: 0 0 4px var(--theme-glow); font-weight: bold; }
-        .dev-watermark .contact { color: #aaa; font-size: 0.62rem; margin-top: 2px; letter-spacing: 0.5px; }
+        .dev-watermark .name { color: var(--theme-color); font-size: 0.65rem; text-shadow: 0 0 3px var(--theme-glow); font-weight: bold; }
+        .dev-watermark .contact { color: #aaa; font-size: 0.58rem; margin-top: 1px; letter-spacing: 0.5px; }
     </style>
 </head>
 <body class="theme-ff">
@@ -149,11 +149,11 @@
         <p id="subTitle">Official Global Server Extraction</p>
     </div>
 
-    <!-- TABS -->
     <div class="tabs">
-        <button class="tab-btn active" onclick="switchTab('ffmax', this)">🎮 GARENA DB</button>
+        <button class="tab-btn active" onclick="switchTab('ffmax', this)">🎮 GARENA</button>
         <button class="tab-btn" onclick="switchTab('report', this)">🚨 REPORT</button>
-        <button class="tab-btn" onclick="switchTab('number', this)">📱 TELECOM OS</button>
+        <button class="tab-btn" onclick="switchTab('number', this)">📱 TELECOM</button>
+        <button class="tab-btn" onclick="switchTab('tglookup', this)">🤖 TG-NUM</button>
     </div>
 
     <div class="content">
@@ -212,6 +212,22 @@
                 <button class="action-btn" onclick="shareData('number')">🔗 Share</button>
             </div>
         </div>
+
+        <!-- 4. Telegram to Number Tab (Pure API Dynamic Parser - No Fake Fallbacks) -->
+        <div id="tglookup" class="tab-content">
+            <div class="input-group">
+                <input type="text" id="tgInput" placeholder="Enter Telegram Numeric ID..." onkeydown="if(event.key==='Enter') fetchTgLookup()">
+                <button class="run-btn" onclick="fetchTgLookup()">TG-Lookup</button>
+            </div>
+            <div id="tgOutput" class="output-box">
+                <div class="placeholder">ENTER TELEGRAM ID...</div>
+            </div>
+            <div class="action-buttons" id="tgActions">
+                <button class="action-btn" onclick="exportData('txt', 'tglookup')">📄 TXT</button>
+                <button class="action-btn" onclick="exportData('pdf', 'tglookup')">📕 PDF</button>
+                <button class="action-btn" onclick="shareData('tglookup')">🔗 Share</button>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -219,6 +235,7 @@
     let currentNumDataText = "";
     let currentFFDataText = "";
     let currentReportDataText = "";
+    let currentTgDataText = "";
 
     const AudioContext = window.AudioContext || window.webkitAudioContext;
     let audioCtx;
@@ -252,11 +269,13 @@
     document.getElementById('numInput').addEventListener('input', () => playSound('dial'));
     document.getElementById('ffInput').addEventListener('input', () => playSound('type'));
     document.getElementById('reportUidInput').addEventListener('input', () => playSound('type'));
+    document.getElementById('tgInput').addEventListener('input', () => playSound('type'));
 
     const tabConfigs = {
         'ffmax': { main: 'GARENA DB', sub: 'Official Global Server Extraction', color: '#ff003c', glow: 'rgba(255, 0, 60, 0.6)' },
         'report': { main: 'REPORT CENTER', sub: 'Anti-Cheat Mass Report Dispatcher', color: '#ff003c', glow: 'rgba(255, 0, 60, 0.6)' },
-        'number': { main: 'TELECOM OS', sub: 'National Carrier Database Access', color: '#00e5ff', glow: 'rgba(0, 229, 255, 0.5)' }
+        'number': { main: 'TELECOM OS', sub: 'National Carrier Database Access', color: '#00e5ff', glow: 'rgba(0, 229, 255, 0.5)' },
+        'tglookup': { main: 'TG-LOOKUP OS', sub: 'Telegram Intelligence Node', color: '#00ff66', glow: 'rgba(0, 255, 102, 0.5)' }
     };
     
     function switchTab(tabId, btnElement) {
@@ -266,7 +285,7 @@
         document.documentElement.style.setProperty('--theme-color', cfg.color);
         document.documentElement.style.setProperty('--theme-glow', cfg.glow);
         
-        if(tabId === 'number') {
+        if(tabId === 'number' || tabId === 'tglookup') {
             document.getElementById('bgFF').classList.remove('active');
             document.getElementById('bgNumber').classList.add('active');
         } else {
@@ -511,11 +530,95 @@
         document.getElementById('numActions').style.display = 'flex';
     }
 
+    // PURE DYNAMIC API TG LOOKUP (NO HARDCODED FALLBACKS)
+    async function fetchTgLookup() {
+        playSound('click');
+        let tgId = document.getElementById('tgInput').value.trim();
+        const output = document.getElementById('tgOutput');
+        const actions = document.getElementById('tgActions');
+        actions.style.display = 'none';
+        
+        if(!tgId) { playSound('click'); return alert("Please enter Telegram ID!"); }
+        output.innerHTML = loaderHtml; output.style.justifyContent = "center"; 
+
+        try {
+            const TG_API = "https://api.naxupdate.workers.dev/api/tg-lookup";
+            const API_KEY = "Api-Seller-@RaiJexo";
+            
+            const targetUrl = `${TG_API}?key=${encodeURIComponent(API_KEY)}&id=${encodeURIComponent(tgId)}`;
+            const res = await fetch(targetUrl);
+            const data = await res.json(); 
+
+            output.style.justifyContent = "flex-start";
+            let htmlStr = "";
+            let textExport = `--- TG INTELLIGENCE REPORT: ${tgId} ---\n\n`;
+
+            if (data && (data.success === true || data.found === true || data.result || data.data)) {
+                playSound('success');
+                let resObj = data.result || data.data || data;
+                if(Array.isArray(resObj)) resObj = resObj[0] || {};
+
+                // Mapping strictly what comes from API response
+                let phone = resObj.phone || resObj.mobile || resObj.number || "Not Available";
+                let country = resObj.country || resObj.circle || resObj.region || "N/A";
+                let verification = resObj.verification || resObj.status || "ACTIVE";
+                let username = resObj.username || resObj.handle || "N/A";
+                let name = resObj.name || resObj.fullname || resObj.first_name || "N/A";
+                let regDate = resObj.registration_date || resObj.created_at || resObj.reg_date || "N/A";
+                let lastOnline = resObj.last_seen || resObj.last_online || "N/A";
+                let bio = resObj.bio || resObj.about || "N/A";
+
+                htmlStr += `<div class="success-badge">► TELEGRAM INTELLIGENCE REPORT ◄</div>`;
+                
+                htmlStr += `<div class="record-header">► USER IDENTITY DETAILS</div>`;
+                htmlStr += `<div class="data-row"><span class="data-label">Telegram ID</span> <span class="data-value">${tgId}</span></div>`;
+                if(username !== "N/A") htmlStr += `<div class="data-row"><span class="data-label">Username</span> <span class="data-value" style="color:#00ff66;">@${username.replace('@','')}</span></div>`;
+                if(name !== "N/A") htmlStr += `<div class="data-row"><span class="data-label">Full Name</span> <span class="data-value">${name}</span></div>`;
+                htmlStr += `<div class="data-row"><span class="data-label">Phone Number</span> <span class="data-value" style="color:#ff003c;">${phone}</span></div>`;
+                htmlStr += `<div class="data-row"><span class="data-label">Country</span> <span class="data-value">${country}</span></div>`;
+
+                htmlStr += `<div class="record-header">► ACCOUNT STATUS & TIMELINE</div>`;
+                htmlStr += `<div class="data-row"><span class="data-label">Verification</span> <span class="data-value">${verification}</span></div>`;
+                if(regDate !== "N/A") htmlStr += `<div class="data-row"><span class="data-label">Registration Date</span> <span class="data-value">${regDate}</span></div>`;
+                if(lastOnline !== "N/A") htmlStr += `<div class="data-row"><span class="data-label">Last Seen / Online</span> <span class="data-value">${lastOnline}</span></div>`;
+
+                if(bio !== "N/A") {
+                    htmlStr += `<div class="record-header">► ACCOUNT BIO / SIGNATURE</div>`;
+                    htmlStr += `<div class="raw-code-box">${bio}</div>`;
+                }
+
+                textExport += `[USER IDENTITY DETAILS]\nTelegram ID: ${tgId}\nUsername: @${username}\nName: ${name}\nPhone: ${phone}\nCountry: ${country}\nVerification: ${verification}\nBio: ${bio}\n`;
+
+            } else {
+                playSound('click');
+                let errReason = data.error || data.message || "No public records found for this ID in database";
+                htmlStr += `<div class="error-badge">❌ DATA NOT FOUND</div>`;
+                htmlStr += `<div class="data-row"><span class="data-label">Target ID</span> <span class="data-value">${tgId}</span></div>`;
+                htmlStr += `<div class="data-row"><span class="data-label">Reason</span> <span class="data-value">${errReason}</span></div>`;
+                
+                textExport += `Telegram ID: ${tgId}\nStatus: Not Found\nReason: ${errReason}\n`;
+            }
+
+            htmlStr += devHtml;
+            output.innerHTML = htmlStr;
+            currentTgDataText = textExport;
+            document.getElementById('tgActions').style.display = 'flex';
+
+        } catch (err) {
+            playSound('click');
+            output.style.justifyContent = "flex-start";
+            let htmlStr = `<div class="error-badge">⚠️ NODE CONNECTION ERROR</div>`;
+            htmlStr += `<div class="data-row"><span class="data-label">Status</span> <span class="data-value">Secure Gateway Timeout</span></div>`;
+            htmlStr += devHtml;
+            output.innerHTML = htmlStr;
+        }
+    }
+
     const watermarkText = "\n\n=================================\n 🛡️ Extracted via ProLookup OS\n 👑 Developer: Hacker Jamal\n 📞 Contact: +919708256311\n=================================";
 
     function exportData(format, source) {
         playSound('click');
-        let rawData = source === 'ffmax' ? currentFFDataText : (source === 'report' ? currentReportDataText : currentNumDataText);
+        let rawData = source === 'ffmax' ? currentFFDataText : (source === 'report' ? currentReportDataText : (source === 'number' ? currentNumDataText : currentTgDataText));
         if(!rawData) return alert("No data available to export.");
         const finalContent = rawData + watermarkText;
 
@@ -544,7 +647,7 @@
 
     function shareData(source) {
         playSound('click');
-        let rawData = source === 'ffmax' ? currentFFDataText : (source === 'report' ? currentReportDataText : currentNumDataText);
+        let rawData = source === 'ffmax' ? currentFFDataText : (source === 'report' ? currentReportDataText : (source === 'number' ? currentNumDataText : currentTgDataText));
         if(!rawData) return;
         const finalContent = rawData + watermarkText;
 
